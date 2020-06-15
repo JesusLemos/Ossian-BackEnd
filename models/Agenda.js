@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
             
         },
         apellido: {
-            type: DataTypes.BIGINT(8),
+            type: DataTypes.STRING(100),
             allowNull: true,
             // validate: {
             //   notNull: { msg: "El campo es requerido" },
@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
             // },
         },
         telefono: {
-            type: DataTypes.STRING(100),
+            type: DataTypes.BIGINT(8),
+            
             allowNull: false,
             validate: {
             notNull: { msg: "El campo es requerido" },
