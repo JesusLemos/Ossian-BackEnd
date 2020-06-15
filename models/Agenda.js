@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
             isInt:{msg:"El campo debe ser numeros"}
             },
         },
-        Correo: {
+        correo: {
             type: DataTypes.STRING(100),
             allowNull: false,
             validate: {
