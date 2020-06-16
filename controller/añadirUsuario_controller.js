@@ -1,7 +1,7 @@
 const db = require('../models')
 
 
-async function addUser(req, res) {
+async function AñadirUsuario(req, res) {
     console.log('req',req)
         try {
             const agenda = await db.Agenda.create(req.body)
@@ -15,4 +15,4 @@ async function addUser(req, res) {
         }
 }
 
-module.exports = addUser;
+module.exports = AñadirUsuario;

@@ -1,6 +1,6 @@
 
 const db = require('../models')
-async function getAllUser  (req, res) {
+async function obtenerTodos  (req, res) {
     try{
         const contactos = await db.Agenda.findAll()
         console.log(contactos)
@@ -13,4 +13,4 @@ async function getAllUser  (req, res) {
     }
 }
 
-module.exports = getAllUser;
+module.exports = obtenerTodos;

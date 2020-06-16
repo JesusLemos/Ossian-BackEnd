@@ -1,6 +1,6 @@
 const db = require('../models');
 
-async function updateUser(req, res) {
+async function actualizarUsuario(req, res) {
     
     try{
         const usuario = await db.Agenda.findByPk(req.params.id)
@@ -16,4 +16,4 @@ async function updateUser(req, res) {
     
 }
 
-module.exports = updateUser;
+module.exports = actualizarUsuario;

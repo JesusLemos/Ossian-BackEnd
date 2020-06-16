@@ -1,6 +1,6 @@
 
 const db = require('../models');
-async function deleteUser(req, res) {
+async function borrarUsuario(req, res) {
     
     try{
         const user = await db.Agenda.findOne(req.param.id)
@@ -17,4 +17,4 @@ async function deleteUser(req, res) {
     
 }
 
-module.exports = deleteUser;
+module.exports = borrarUsuario;

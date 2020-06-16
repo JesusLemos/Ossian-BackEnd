@@ -1,6 +1,6 @@
 const db = require('../models');
 
-async function findOneUser(req, res) {
+async function buscarUnUsuario(req, res) {
     
     db.Agenda.findOne({
         where:{
@@ -11,4 +11,4 @@ async function findOneUser(req, res) {
         .catch(err => console.error(err))
 }
 
-module.exports = findOneUser;
+module.exports = buscarUnUsuario;

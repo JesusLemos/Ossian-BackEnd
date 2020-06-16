@@ -1,24 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
-const addUser = require('../controller/addUser_controller');
-const getAll = require('../controller/getAllUser_controller');
-const findOneuser = require('../controller/findOneUser_controller');
-const filterUser = require('../controller/filterUser_controller');
-const updateUser = require('../controller/updateUser_controller');
-const deleteUser_controller = require('../controller/deleteUser_controller');
+const añadirUsuario = require('../controller/añadirUsuario_controller');
+const obtenerTodos = require('../controller/obtenerTodos_controller');
+const buscarUnUsuario = require('../controller/buscarUnUsuario_controller');
+const actualizarUsuario = require('../controller/actualizarUsuario_controller');
+const borrarUsuario = require('../controller/borrarUsuario_controller');
 
 // router.get('/', function(req, res, next) {
 //     res.render('index', { title: 'Agenda' });
 //   });
 
-router.get('/getall', getAll);
-router.get('/findoneuser/:id', findOneuser);
-router.get('/filteruser/:nombre', filterUser);
-router.post('/adduser', addUser );
+router.get('/obtenertodos', obtenerTodos);
+router.get('/usuario/:id', buscarUnUsuario);
+
+router.post('/anadirusuario', añadirUsuario );
 
 
-router.patch('/update/:id', updateUser)
-router.delete('/delete/:id', deleteUser_controller);
+router.patch('/actualizar/:id', actualizarUsuario)
+router.delete('/eliminar/:id', borrarUsuario);
 
 module.exports = router;
